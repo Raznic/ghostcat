@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
         {
             case 'b':
                 boo();
-                break;
+                exit(EXIT_SUCCESS);
             case 'm':
                 break;
             default:
@@ -77,5 +77,18 @@ int catfile(FILE *fin, FILE *fout)
 
 void boo()
 {
-    printf("    /\\     /\\  \n");
+    printf("    |\\   |\\              \n");
+    printf("    | \\__| \\             \n");
+    printf("   /  x  x  \\             \n");
+    printf("   \\   Y     \\           \n");
+    printf("    \\__^      \\          \n");
+    printf("   ___/   ___  \\          \n");
+    printf("  ((( \\  ((( \\  \\       \n");
+    printf("     \\_\\    \\_\\  \\    \n");
+    printf("        \\         \\      \n");
+    printf("         ~~~~~    /        \n");
+    printf("             /   /         \n");
+    printf("             \\  /         \n");
+    printf("             / /           \n");
+    printf("             \\/           \n");
 }
