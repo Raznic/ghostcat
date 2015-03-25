@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -5,26 +6,47 @@
 #define BUFFER_SIZE 1024
 
 int catfile(FILE *fin, FILE *fout);
+void boo();
 
 int main(int argc, char *argv[])
 {
-     FILE *fin = NULL, *fout = NULL;
-     const char *dev_null_path = "/dev/null";
+    int opt = 0, num_opts;
+    FILE *fin = NULL, *fout = NULL;
+    const char *dev_null_path = "/dev/null";
+    const char *options = "bm:";
 
-     // Open input file
-     if(argc < 2)
-          fin = stdin;
-     else
-     {
-          if ((fin = fopen(argv[1], "r")) == NULL)
-               perror("Failed to open input file\n");
-     }
+    // Handle options
+    while((opt = getopt(argc, argv, options)) != -1) 
+    {
+        num_opts++;
+        switch(opt)
+        {
+            case 'b':
+                boo();
+                break;
+            case 'm':
+                break;
+            default:
+                fprintf(stderr, "Usage: %s [-b]\n", argv[0]);
+                exit(EXIT_FAILURE);
+        }
+    }
 
-     // Open output file
-     if((fout = fopen(dev_null_path, "w")) == NULL)
+    // Open input file
+    if(argc - num_opts < 2)
+         fin = stdin;
+    else
+    {
+         if ((fin = fopen(argv[argc-1], "r")) == NULL)
+              perror("Failed to open input file\n");
+    }
+
+    // Open output file
+    if((fout = fopen(dev_null_path, "w")) == NULL)
         perror("Failed to open /dev/null for writing\n");
 
-     return catfile(fin, fout);
+
+    return catfile(fin, fout);
 }
 
 int catfile(FILE *fin, FILE *fout)
@@ -51,4 +73,9 @@ int catfile(FILE *fin, FILE *fout)
     }
 
     return 0;
+}
+
+void boo()
+{
+    printf("    /\\     /\\  \n");
 }
