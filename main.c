@@ -5,6 +5,7 @@
 
 #define BUFFER_SIZE 1024
 
+void printhelp();
 int catfile(FILE *fin, FILE *fout);
 void boo();
 
@@ -13,7 +14,7 @@ int main(int argc, char *argv[])
     int opt = 0, num_opts;
     FILE *fin = NULL, *fout = NULL;
     const char *dev_null_path = "/dev/null";
-    const char *options = "bm:";
+    const char *options = "hbm:";
 
     // Handle options
     while((opt = getopt(argc, argv, options)) != -1) 
@@ -21,6 +22,9 @@ int main(int argc, char *argv[])
         num_opts++;
         switch(opt)
         {
+            case 'h':
+                printhelp();
+                exit(EXIT_SUCCESS);
             case 'b':
                 boo();
                 exit(EXIT_SUCCESS);
@@ -47,6 +51,15 @@ int main(int argc, char *argv[])
 
 
     return catfile(fin, fout);
+}
+
+void printhelp()
+{
+    printf("Usage: ghostcat [OPTION]... [FILE]...\n");
+    printf("Concatenate FILE, or standard input, to /dev/null\n");
+    printf("\n");
+    printf("  -h    Seriously? How else did you get this printout?\n");
+    printf("  -b    Boo! The Ghost Cat appears\n");
 }
 
 int catfile(FILE *fin, FILE *fout)
