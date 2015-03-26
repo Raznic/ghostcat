@@ -90,18 +90,29 @@ int catfile(FILE *fin, FILE *fout)
 
 void boo()
 {
-    printf("    |\\   |\\              \n");
-    printf("    | \\__| \\             \n");
-    printf("   /  x  x  \\             \n");
-    printf("   \\   Y     \\           \n");
-    printf("    \\__^      \\          \n");
-    printf("   ___/   ___  \\          \n");
-    printf("  ((( \\  ((( \\  \\       \n");
-    printf("     \\_\\    \\_\\  \\    \n");
-    printf("        \\         \\      \n");
-    printf("         ~~~~~    /        \n");
-    printf("             /   /         \n");
-    printf("             \\  /         \n");
-    printf("             / /           \n");
-    printf("             \\/           \n");
+    printf("           ____________________ \n");
+    printf("          /  __    ___    ___  \\            \n");
+    printf("         |  |  \\  /   \\  /   \\  |            \n");
+    printf("         |  |__/  |   |  |   |  |       \n");
+    printf("         |  |  \\  |   |  |   |  |          \n");
+    printf("         |  |__/  \\___/  \\___/  |               \n");
+    printf("          \\_______       ______/               \n");
+    printf("                  \\    /              \n");
+    printf("                   \\  /               \n");
+    printf("                    \\/                \n");
+    printf("                                        \n");
+    printf("                 |\\   |\\              \n");
+    printf("                 | \\__| \\             \n");
+    printf("                /  x  x  \\             \n");
+    printf("                \\   Y     \\           \n");
+    printf("                 \\__^      \\          \n");
+    printf("                ___/   ___  \\          \n");
+    printf("               ((( \\  ((( \\  \\       \n");
+    printf("                  \\_\\    \\_\\  \\    \n");
+    printf("                     \\         \\      \n");
+    printf("                      ~~~~~    /        \n");
+    printf("                          /   /         \n");
+    printf("                          \\  /         \n");
+    printf("                          / /           \n");
+    printf("                          \\/           \n");
 }
