@@ -5,9 +5,7 @@
 
 #define BUFFER_SIZE 1024
 
-void printhelp();
-int catfile(FILE *fin, FILE *fout);
-void boo();
+void printhelp(); int catfile(FILE *fin, FILE *fout); void boo();
 
 int main(int argc, char *argv[])
 {
@@ -104,7 +102,7 @@ void boo()
     printf("                 |\\   |\\              \n");
     printf("                 | \\__| \\             \n");
     printf("                /  x  x  \\             \n");
-    printf("                \\   Y     \\           \n");
+    printf("                \\  >Y<    \\           \n");
     printf("                 \\__^      \\          \n");
     printf("                ___/   ___  \\          \n");
     printf("               ((( \\  ((( \\  \\       \n");
